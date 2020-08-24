@@ -5,7 +5,7 @@ import javax.usb.UsbServices;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class Main {
+public class  PidRegulator{
     double ust = 20.0;
     double lastInput = ust;
     double P,I,D,output,lastP,input,error;
@@ -31,7 +31,7 @@ public class Main {
         return input;
     }
     public static void main(String[] args) throws UsbException {
-        Main one = new Main();
+        PidRegulator one = new PidRegulator();
         while (true){
         Scanner scanner = new Scanner(System.in);
         double temp = scanner.nextDouble();
